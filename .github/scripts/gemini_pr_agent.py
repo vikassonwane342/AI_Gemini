@@ -40,7 +40,7 @@ Respond ONLY with a valid JSON array matching this exact schema:
 
 # 4. Call Gemini (Enforcing JSON output)
 response = client.models.generate_content(
-    model='gemini-2.5-pro',
+    model='gemini-2.0-flash',
     contents=prompt,
     config=types.GenerateContentConfig(
         system_instruction=system_rules,
