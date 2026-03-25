@@ -30,7 +30,9 @@ public class AuthController(IAuthService authService, ICurrentUserService curren
         var response = await authService.LoginAsync(request, cancellationToken);
         sw.Stop();
         Console.WriteLine($"[AuthController.Login] Execution Time: {sw.ElapsedMilliseconds}ms");
-        return Ok(ApiResponse<AuthResponseDto>.SuccessResponse(response, "Login successful."));
+        // return Ok(ApiResponse<AuthResponseDto>.SuccessResponse(response, "Login successful."));
+        return Ok(ApiResponse<AuthResponseDto>.SuccessResponse(null, "Login successful."));
+
     }
 
     [HttpGet("me")]
